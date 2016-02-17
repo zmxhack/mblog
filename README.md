@@ -18,7 +18,7 @@ OCSP Stapling 就是让客户端省掉了第二次请求。当使用 OCSP Stapli
 
 为了测试 OCSP Stapling 的具体表现，我们对若干测试点进行了长达十二天的观察。
 
-观察结果如下：
+观察结果汇总如下：
 
 
 | Enable OCSP Stapling | Average SSL Connection Time |
@@ -37,7 +37,7 @@ OCSP Stapling 就是让客户端省掉了第二次请求。当使用 OCSP Stapli
 
     echo QUIT | openssl s_client -connect docs.upyun.com:443 -servername docs.upyun.com -tls1_2 -status 2> /dev/null | grep -A 17 'OCSP response:' | grep -B 17 'Next Update'
 
-如果你已经开启 OCSP Stapling ， 你会得到以下内容：
+如果你已经开启 OCSP Stapling ， 你会得到类似以下的内容：
 
     OCSP response: 
     ======================================
