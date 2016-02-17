@@ -64,3 +64,5 @@ OCSP Stapling 就是让客户端省掉了第二次请求。当使用 OCSP Stapli
 [MaxCDN Blog](https://www.maxcdn.com/blog/now-shipping-ocsp-stapling/)
 
 [WildDog Blog](https://blog.wilddog.com/?p=615)
+
+[CloudFlare Blog](https://blog.cloudflare.com/ocsp-stapling-how-cloudflare-just-made-ssl-30/)
