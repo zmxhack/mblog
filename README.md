@@ -6,7 +6,7 @@
 
 ### OCSP Stapling 是如何让 UPYUN 更高效的
 
-如果不使用 OCSP Stapling，那么当客户端访问 HTTPS 页面时，只能通过下载证书撤销列表(使用 CRLs 时)或者通过 OCSP 服务器(使用 OCSP 协议时)来验证证书的合法性。无论是何种方式，浏览器都需要发起两次无法并发的请求(第一次向 web server 发起，第二次会根据证书中的 URI 下载 CRLs 或者向 OCSP server 发起请求)。
+如果不使用 OCSP Stapling，那么当客户端访问 HTTPS 页面时，只能通过下载证书撤销列表（使用 CRLs 时）或者通过 OCSP 服务器（使用 OCSP 协议时）来验证证书的合法性。无论是何种方式，浏览器都需要发起两次无法并发的请求（第一次向 web server 发起，第二次会根据证书中的 URI 下载 CRLs 或者向 OCSP server 发起请求）。
 
 OCSP Stapling 就是让客户端省掉了第二次请求。当使用 OCSP Stapling 时，客户端可以直接通过 web server 来验证证书是否被撤销。OCSP Stapling 在 UPYUN 上的具体工作流程可以分成以下几步：
 
